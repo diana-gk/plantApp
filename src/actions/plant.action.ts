@@ -1,4 +1,4 @@
-"use server"
+"use server";
 
 import { prisma } from "@/lib/prisma";
 import { getUserId } from "./user.actions";
@@ -33,13 +33,11 @@ export async function getPlants(searchTerm?: String) {
   }
 }
 
-
-export async function getPlantById (id: string) {
+export async function getPlantById(id: string) {
   return await prisma.plants.findUnique({
-    where: {id},
+    where: { id },
   });
 }
-
 
 export async function createPlant(data: Prisma.PlantsCreateInput) {
   console.log("creating plant");
@@ -61,7 +59,6 @@ export async function createPlant(data: Prisma.PlantsCreateInput) {
     throw error;
   }
 }
-
 
 export async function editPlant(
   id: string, //identify which plant we are editing

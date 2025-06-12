@@ -130,7 +130,7 @@ export default function InventoryTable({ plants }: InventoryTableProps) {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {filteredPlants?.map((plant) => {
+          {filteredPlants?.map((plant : any) => {
             const slugifiedName = plant.name.toLowerCase().replace(/\s+/g, "-");
             const slug = `${plant.id}--${slugifiedName}`;
             const plantUrl = `/plants/${slug}`;
