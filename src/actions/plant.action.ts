@@ -2,7 +2,7 @@
 
 import { prisma } from "@/lib/prisma";
 import { getUserId } from "./user.actions";
-import { Plants } from "../../../../generated/prisma/index";
+// import { Plants } from "../../../../generated/prisma/index";s
 import { revalidatePath } from "next/cache";
 import { Prisma } from "@prisma/client";
 
